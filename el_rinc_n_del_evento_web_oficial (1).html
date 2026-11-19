@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón del Evento | Alquiler de Mobiliario y Decoración para Eventos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond (Serif elegante tipo logo) & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#4A3B31',      // Marrón oscuro del texto del logo
+                            taupe: '#8C7864',     // Marrón tierra / topo de la carpa del logo
+                            gold: '#B59A78',      // Acento dorado cálido
+                            sand: '#D8CFC4',      // Beige arena suave
+                            cream: '#F9F7F4',     // Crema cálido de fondo
+                            light: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(74, 59, 49, 0.08)',
+                        'card': '0 4px 20px -2px rgba(74, 59, 49, 0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-taupe selection:text-white overflow-x-hidden">
+
+    <!-- ================= BARRA DE NAVEGACIÓN (HEADER) ================= -->
+    <header id="navbar" class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur-md border-b border-brand-sand/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 md:h-24">
+                
+                <!-- Logotipo Corporativo fiel a LOGO TFG.png + Nombre al lado -->
+                <a href="#inicio" class="flex items-center gap-3.5 group focus:outline-none">
+                    <!-- Emblema SVG fiel a LOGO TFG.png (jaima con costuras, faldón, 2 postes laterales y texto integrado) -->
+                    <div class="w-16 h-14 sm:w-20 sm:h-16 flex items-center justify-center rounded-2xl bg-white shadow-card border border-brand-sand/60 p-1.5 group-hover:border-brand-taupe transition-colors shrink-0">
+                        <svg viewBox="0 0 260 175" class="w-full h-full overflow-visible" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Remate superior de la jaima -->
+                            <circle cx="130" cy="6" r="2.5" fill="#8C7864" />
+                            <!-- Techo curvo puntiagudo tipo jaima -->
+                            <path d="M130 6 C110 48, 62 84, 6 96 L254 96 C198 84, 150 48, 130 6 Z" fill="#8C7864" />
+                            <!-- Costuras y pliegues sutiles de la lona (como en LOGO TFG.png) -->
+                            <path d="M130 6 C122 50, 100 82, 82 96" stroke="#7A6855" stroke-width="1.3" fill="none" opacity="0.65" />
+                            <path d="M130 6 C138 50, 160 82, 178 96" stroke="#7A6855" stroke-width="1.3" fill="none" opacity="0.65" />
+                            <line x1="130" y1="6" x2="130" y2="96" stroke="#7A6855" stroke-width="1.3" opacity="0.65" />
+                            <!-- Faldón horizontal superior con costuras -->
+                            <rect x="6" y="96" width="248" height="8" rx="1.5" fill="#8C7864" />
+                            <line x1="82" y1="96" x2="82" y2="104" stroke="#7A6855" stroke-width="1.2" opacity="0.65" />
+                            <line x1="130" y1="96" x2="130" y2="104" stroke="#7A6855" stroke-width="1.2" opacity="0.65" />
+                            <line x1="178" y1="96" x2="178" y2="104" stroke="#7A6855" stroke-width="1.2" opacity="0.65" />
+                            <!-- Dos postes laterales verticales -->
+                            <rect x="10" y="104" width="4.5" height="58" fill="#8C7864" />
+                            <rect x="245.5" y="104" width="4.5" height="58" fill="#8C7864" />
+                            <!-- Tipografía Serif marrón oscuro integrada entre los postes -->
+                            <text x="130" y="135" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="37" font-weight="600" letter-spacing="1" fill="#4A3B31">EL RINCON</text>
+                            <text x="130" y="166" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="31" font-weight="600" letter-spacing="1.2" fill="#4A3B31">DEL EVENTO</text>
+                        </svg>
+                    </div>
+                    <!-- Nombre de la empresa al lado derecho -->
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-brand-dark leading-none">
+                            EL RINCÓN
+                        </span>
+                        <span class="text-[10px] sm:text-xs font-medium tracking-[0.22em] text-brand-taupe uppercase mt-1">
+                            DEL EVENTO • EJEA DE LOS CABALLEROS
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Navegación Escritorio -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-sm font-medium text-brand-dark/80 hover:text-brand-taupe transition-colors py-2">Inicio</a>
+                    <a href="#servicios" class="text-sm font-medium text-brand-dark/80 hover:text-brand-taupe transition-colors py-2">Servicios y Catálogo</a>
+                    <a href="#testimonios" class="text-sm font-medium text-brand-dark/80 hover:text-brand-taupe transition-colors py-2">Testimonios</a>
+                    <a href="#contacto" class="text-sm font-medium text-brand-dark/80 hover:text-brand-taupe transition-colors py-2">Contacto</a>
+                </nav>
+
+                <!-- Botones Acción Escritorio (Lista de interés + CTA) -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button id="btn-lista-desktop" onclick="toggleCartDrawer()" class="relative p-3 rounded-xl bg-white border border-brand-sand text-brand-dark hover:border-brand-taupe transition-all flex items-center gap-2 text-sm font-medium" title="Ver selección de mobiliario">
+                        <svg class="w-5 h-5 text-brand-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                        <span>Mi Selección</span>
+                        <span id="cart-badge-desktop" class="inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-white bg-brand-taupe rounded-full">0</span>
+                    </button>
+
+                    <a href="#contacto" class="px-5 py-3 rounded-xl bg-brand-dark text-white text-sm font-semibold hover:bg-brand-taupe transition-all duration-300 shadow-soft">
+                        Pedir Presupuesto
+                    </a>
+                </div>
+
+                <!-- Controles Móvil (Carrito + Hamburguesa) -->
+                <div class="flex items-center gap-2 md:hidden">
+                    <button onclick="toggleCartDrawer()" class="relative p-3 rounded-xl bg-white border border-brand-sand text-brand-dark" aria-label="Mi Selección">
+                        <svg class="w-5 h-5 text-brand-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                        <span id="cart-badge-mobile" class="absolute -top-1 -right-1 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-brand-taupe rounded-full">0</span>
+                    </button>
+
+                    <button id="mobile-menu-btn" class="p-3 rounded-xl bg-white border border-brand-sand text-brand-dark focus:outline-none" aria-label="Abrir menú">
+                        <svg id="icon-menu-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="icon-menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-sand px-4 pt-3 pb-6 space-y-2 shadow-lg">
+            <a href="#inicio" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-brand-dark hover:bg-brand-cream">Inicio</a>
+            <a href="#servicios" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-brand-dark hover:bg-brand-cream">Servicios y Catálogo</a>
+            <a href="#testimonios" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-brand-dark hover:bg-brand-cream">Testimonios</a>
+            <a href="#contacto" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-brand-dark hover:bg-brand-cream">Contacto</a>
+            <div class="pt-3">
+                <a href="#contacto" class="mobile-link block w-full text-center px-5 py-3.5 rounded-xl bg-brand-dark text-white font-semibold shadow-soft">
+                    Solicitar Presupuesto
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= SECCIÓN 1: INICIO (HERO) ================= -->
+    <section id="inicio" class="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+        <!-- Elemento decorativo sutil de fondo -->
+        <div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-brand-sand/25 rounded-bl-[100px] hidden lg:block"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Columna Texto Hero -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-brand-sand shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-brand-taupe"></span>
+                        <span class="text-xs sm:text-sm font-medium text-brand-taupe tracking-wide">
+                            Ejea de los Caballeros · Cinco Villas · Zaragoza
+                        </span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-dark leading-[1.12]">
+                        Del alquiler a la celebración, <span class="italic font-medium text-brand-taupe">todo en un rincón.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-brand-dark/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Transformamos tus espacios con alquiler de mobiliario y decoración personalizada. Especializados en bodas, tardeos, celebraciones familiares, eventos de empresa, quintos y ferias agrícolas con opciones flexibles a tu medida.
+                    </p>
+
+                    <!-- Botones CTA -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#servicios" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-brand-dark text-white font-semibold text-sm sm:text-base hover:bg-brand-taupe transition-all duration-300 shadow-soft text-center">
+                            Explorar Modalidades
+                        </a>
+                        <a href="#contacto" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white text-brand-dark border border-brand-sand font-semibold text-sm sm:text-base hover:border-brand-taupe hover:bg-brand-cream transition-all duration-300 text-center">
+                            Solicitar Presupuesto
+                        </a>
+                    </div>
+
+                    <!-- Insignias de Valor Diferencial -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-brand-sand/70 text-left">
+                        <div class="flex items-start gap-3 p-3 rounded-2xl bg-white/70 border border-brand-sand/40">
+                            <div class="p-2 rounded-xl bg-brand-cream text-brand-taupe shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-brand-dark">Proximidad Local</h3>
+                                <p class="text-xs text-brand-dark/70 mt-0.5">Sede en Polígono Valdeferrín, Ejea.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-2xl bg-white/70 border border-brand-sand/40">
+                            <div class="p-2 rounded-xl bg-brand-cream text-brand-taupe shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-brand-dark">3 Modalidades</h3>
+                                <p class="text-xs text-brand-dark/70 mt-0.5">Desde solo alquiler a servicio integral.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-2xl bg-white/70 border border-brand-sand/40">
+                            <div class="p-2 rounded-xl bg-brand-cream text-brand-taupe shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xs font-bold uppercase tracking-wider text-brand-dark">Sostenibilidad</h3>
+                                <p class="text-xs text-brand-dark/70 mt-0.5">Economía circular y reutilización.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Composición Fotográfica Hero -->
+                <div class="lg:col-span-6 relative pb-6 sm:pb-10">
+                    <div class="grid grid-cols-12 gap-4 items-center">
+                        <!-- Imagen Principal -->
+                        <div class="col-span-8">
+                            <div class="relative rounded-3xl overflow-hidden shadow-soft border-4 border-white aspect-[4/5]">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80" 
+                                    alt="Decoración elegante para bodas y eventos al aire libre"
+                                    onerror="this.src='https://placehold.co/600x750/8C7864/FFFFFF?text=El+Rincon+del+Evento'"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-brand-dark/15 to-transparent"></div>
+                                <div class="absolute bottom-14 sm:bottom-16 left-5 right-5 text-white">
+                                    <span class="text-xs uppercase tracking-widest bg-brand-taupe/95 px-3 py-1 rounded-full shadow-sm">Diseño & Estilismo</span>
+                                    <p class="font-serif text-xl sm:text-2xl leading-snug mt-2 drop-shadow-xs">Ambientes únicos sin necesidad de comprar</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Columna Secundaria con 2 imágenes -->
+                        <div class="col-span-4 space-y-4">
+                            <div class="rounded-3xl overflow-hidden shadow-card border-4 border-white aspect-square">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" 
+                                    alt="Zona chill-out y mobiliario para tardeos"
+                                    onerror="this.src='https://placehold.co/400x400/D8CFC4/4A3B31?text=Chill+Out'"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                >
+                            </div>
+                            <div class="rounded-3xl overflow-hidden shadow-card border-4 border-white aspect-[3/4]">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" 
+                                    alt="Iluminación decorativa y mesas para eventos"
+                                    onerror="this.src='https://placehold.co/400x530/8C7864/FFFFFF?text=Celebraciones'"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Flotante de Valoración (despejada debajo de la foto sin tapar textos) -->
+                    <div class="mt-4 sm:mt-0 sm:flex items-center gap-3.5 bg-white p-4 rounded-2xl shadow-soft border border-brand-sand/70 sm:absolute sm:bottom-0 sm:left-4 sm:right-auto z-10">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-11 h-11 rounded-xl bg-brand-taupe/15 text-brand-taupe flex items-center justify-center font-serif font-bold text-xl shrink-0">
+                                100%
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-brand-dark">Adaptado a tu presupuesto</p>
+                                <p class="text-xs text-brand-dark/70">Particular, empresa o comisión de fiestas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN 2: SERVICIOS Y MODALIDADES ================= -->
+    <section id="servicios" class="py-16 md:py-24 bg-white border-y border-brand-sand/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Cabecera de Sección -->
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-taupe">Flexibilidad a tu medida</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-2">
+                    Nuestras Modalidades de Contratación
+                </h2>
+                <p class="text-brand-dark/75 mt-4 text-sm sm:text-base leading-relaxed">
+                    Tú decides hasta dónde quieres que te ayudemos. Elige entre encargarte tú mismo de la logística o dejar todo el diseño y montaje en manos de nuestro equipo.
+                </p>
+            </div>
+
+            <!-- Tarjetas de las 3 Modalidades -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                
+                <!-- Modalidad 1: Solo Alquiler -->
+                <div class="rounded-3xl bg-brand-cream p-8 border border-brand-sand/70 hover:border-brand-taupe transition-all duration-300 flex flex-col justify-between shadow-card">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3.5 py-1 rounded-full bg-white text-brand-taupe text-xs font-bold uppercase tracking-wider border border-brand-sand">
+                                Opción 01
+                            </span>
+                            <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-brand-taupe shadow-sm">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-3">Solo Alquiler</h3>
+                        <p class="text-sm text-brand-dark/75 leading-relaxed mb-6">
+                            La opción más económica si dispones de vehículo propio y quieres organizar la decoración a tu ritmo.
+                        </p>
+                        <ul class="space-y-3 text-sm text-brand-dark/85 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-taupe shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Selección libre de nuestro catálogo
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-taupe shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Recogida y devolución en Polígono Valdeferrín
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-taupe shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Embalaje protector reutilizable incluido
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="selectModality('Solo Alquiler')" class="w-full py-3.5 px-5 rounded-xl bg-white text-brand-dark border border-brand-sand font-semibold text-sm hover:bg-brand-dark hover:text-white transition-colors">
+                        Elegir Solo Alquiler
+                    </button>
+                </div>
+
+                <!-- Modalidad 2: Alquiler + Transporte -->
+                <div class="rounded-3xl bg-brand-cream p-8 border border-brand-sand/70 hover:border-brand-taupe transition-all duration-300 flex flex-col justify-between shadow-card">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3.5 py-1 rounded-full bg-white text-brand-taupe text-xs font-bold uppercase tracking-wider border border-brand-sand">
+                                Opción 02
+                            </span>
+                            <div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-brand-taupe shadow-sm">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-3">Alquiler + Transporte</h3>
+                        <p class="text-sm text-brand-dark/75 leading-relaxed mb-6">
+                            Olvídate de cargar furgonetas. Te llevamos todo el mobiliario hasta el lugar del evento y lo recogemos al finalizar.
+                        </p>
+                        <ul class="space-y-3 text-sm text-brand-dark/85 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-taupe shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Todo lo incluido en Solo Alquiler
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-taupe shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Entrega puntual en Ejea, Cinco Villas y Zaragoza
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-taupe shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Retirada programada tras la celebración
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="selectModality('Alquiler + Transporte')" class="w-full py-3.5 px-5 rounded-xl bg-white text-brand-dark border border-brand-sand font-semibold text-sm hover:bg-brand-dark hover:text-white transition-colors">
+                        Elegir Alquiler + Transporte
+                    </button>
+                </div>
+
+                <!-- Modalidad 3: Servicio Completo (Destacada) -->
+                <div class="rounded-3xl bg-brand-dark text-white p-8 border-2 border-brand-taupe relative flex flex-col justify-between shadow-soft transform lg:-translate-y-2">
+                    <div class="absolute -top-3.5 right-6 bg-brand-taupe text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow">
+                        Más Solicitado
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3.5 py-1 rounded-full bg-white/10 text-brand-sand text-xs font-bold uppercase tracking-wider">
+                                Opción 03 · Integral
+                            </span>
+                            <div class="w-12 h-12 rounded-2xl bg-brand-taupe flex items-center justify-center text-white">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-3">Servicio Completo</h3>
+                        <p class="text-sm text-brand-sand leading-relaxed mb-6">
+                            Disfruta de tu evento sin preocupaciones. Nos encargamos de la propuesta estética, transporte, montaje y desmontaje.
+                        </p>
+                        <ul class="space-y-3 text-sm text-white/90 mb-8">
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Asesoramiento estético y diseño personalizado
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Transporte de ida y vuelta incluido
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                Montaje profesional, estilismo y recogida final
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="selectModality('Servicio Completo')" class="w-full py-3.5 px-5 rounded-xl bg-brand-taupe text-white font-semibold text-sm hover:bg-brand-gold transition-colors shadow">
+                        Elegir Servicio Completo
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Catálogo Interactivo por Categorías -->
+            <div class="pt-8 border-t border-brand-sand/60">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-taupe">Catálogo Destacado</span>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-1">
+                            Mobiliario y Decoración por Ambiente
+                        </h3>
+                    </div>
+
+                    <!-- Botones de Filtro -->
+                    <div class="flex flex-wrap gap-2" id="catalog-filters">
+                        <button data-filter="todos" class="filter-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-dark text-white transition-all">
+                            Todos
+                        </button>
+                        <button data-filter="chillout" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-cream text-brand-dark hover:bg-brand-sand/50 transition-all">
+                            Chill-Out y Tardeos
+                        </button>
+                        <button data-filter="bodas" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-cream text-brand-dark hover:bg-brand-sand/50 transition-all">
+                            Bodas y Ceremonias
+                        </button>
+                        <button data-filter="corporativo" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-cream text-brand-dark hover:bg-brand-sand/50 transition-all">
+                            Empresas y Ferias
+                        </button>
+                        <button data-filter="iluminacion" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-brand-cream text-brand-dark hover:bg-brand-sand/50 transition-all">
+                            Photocalls e Iluminación
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Grid de Productos del Catálogo (Renderizado dinámico por JS) -->
+                <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+                    <!-- Las tarjetas se inyectan mediante JavaScript -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN 3: TESTIMONIOS ================= -->
+    <section id="testimonios" class="py-16 md:py-24 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-taupe">Experiencias Reales</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-2">
+                    Lo que dicen quienes celebran con nosotros
+                </h2>
+                <p class="text-brand-dark/75 mt-4 text-sm sm:text-base">
+                    Particulares, empresas y comisiones de Ejea de los Caballeros, las Cinco Villas y Zaragoza confían en nuestra cercanía y profesionalidad.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonio 1: Boda / Tardeo en Ejea -->
+                <div class="bg-white rounded-3xl p-8 border border-brand-sand/60 shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-brand-gold mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-brand-dark/85 text-sm sm:text-base italic leading-relaxed mb-6">
+                            "Contratamos el Servicio Completo para el tardeo de nuestra boda en Ejea y fue un acierto absoluto. Andrea nos asesoró con el rincón chill-out y Rositsa dejó todo montado impecable antes de que llegaran los invitados. Un lujo tenerlos tan cerca."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3.5 pt-4 border-t border-brand-cream">
+                        <div class="w-11 h-11 rounded-full bg-brand-taupe text-white flex items-center justify-center font-serif font-bold text-lg">
+                            MP
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-brand-dark">María Pilar y Javier</h4>
+                            <p class="text-xs text-brand-taupe">Boda y Tardeo · Ejea de los Caballeros</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2: Evento Corporativo en Cinco Villas -->
+                <div class="bg-white rounded-3xl p-8 border border-brand-sand/60 shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-brand-gold mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-brand-dark/85 text-sm sm:text-base italic leading-relaxed mb-6">
+                            "Necesitábamos mobiliario elegante y barras altas para la presentación de campaña en la Feria Agrícola. Nos ofrecieron presupuesto claro desde el primer minuto, entrega puntual en el recinto y una calidad de material muy superior a lo habitual."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3.5 pt-4 border-t border-brand-cream">
+                        <div class="w-11 h-11 rounded-full bg-brand-dark text-white flex items-center justify-center font-serif font-bold text-lg">
+                            AC
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-brand-dark">Agroalimentaria Cinco Villas</h4>
+                            <p class="text-xs text-brand-taupe">Evento Corporativo · Comarca Cinco Villas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3: Quintos / Fiestas Patronales -->
+                <div class="bg-white rounded-3xl p-8 border border-brand-sand/60 shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-brand-gold mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-brand-dark/85 text-sm sm:text-base italic leading-relaxed mb-6">
+                            "Para la fiesta de Quintos elegimos la modalidad de Alquiler + Transporte con photocall, mesas y guirnaldas de luces. Nos ahorramos comprar cosas que luego no sabríamos dónde guardar y el local quedó espectacular. ¡Repetiremos seguro!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3.5 pt-4 border-t border-brand-cream">
+                        <div class="w-11 h-11 rounded-full bg-brand-gold text-white flex items-center justify-center font-serif font-bold text-lg">
+                            Q26
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-brand-dark">Comisión Quintos 2026</h4>
+                            <p class="text-xs text-brand-taupe">Fiesta Privada · Tauste / Zaragoza</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN 4: CONTACTO Y PRESUPUESTO ================= -->
+    <section id="contacto" class="py-16 md:py-24 bg-white border-t border-brand-sand/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Columna Izquierda: Datos de Contacto y Ubicación -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-taupe">Hablemos de tu evento</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">
+                            Solicita tu presupuesto sin compromiso
+                        </h2>
+                        <p class="text-brand-dark/75 mt-3 text-sm sm:text-base leading-relaxed">
+                            Cuéntanos qué tipo de celebración estás organizando y qué modalidad prefieres. Te responderemos en menos de 24 horas con una propuesta detallada y sin costes ocultos.
+                        </p>
+                    </div>
+
+                    <!-- Tarjetas de Info -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sand/50">
+                            <div class="w-10 h-10 rounded-xl bg-white text-brand-taupe flex items-center justify-center shrink-0 shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-brand-dark">Sede y Almacén</h3>
+                                <p class="text-sm text-brand-dark/75 mt-0.5">Calle F, Polígono de Valdeferrín<br>50600 Ejea de los Caballeros (Zaragoza)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sand/50">
+                            <div class="w-10 h-10 rounded-xl bg-white text-brand-taupe flex items-center justify-center shrink-0 shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-brand-dark">Área de Cobertura</h3>
+                                <p class="text-sm text-brand-dark/75 mt-0.5">Ejea de los Caballeros, Comarca de las Cinco Villas y Zaragoza capital y provincia.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sand/50">
+                            <div class="w-10 h-10 rounded-xl bg-white text-brand-taupe flex items-center justify-center shrink-0 shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-bold text-brand-dark">Horario y Atención Directa</h3>
+                                <p class="text-sm text-brand-dark/75 mt-0.5">Lunes a Viernes: 09:00–14:00 y 16:00–19:30<br>Sábados y Domingos: Servicio de montajes y eventos</p>
+                                <p class="text-sm font-semibold text-brand-taupe mt-1">Tel / WhatsApp: +34 600 123 456</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enlaces Redes Sociales -->
+                    <div class="pt-2">
+                        <p class="text-xs font-bold uppercase tracking-wider text-brand-dark/60 mb-3">Síguenos e inspírate</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#contacto" onclick="showToast('Abriendo perfil oficial de Instagram @elrincondelevento')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-cream hover:bg-brand-taupe hover:text-white text-brand-dark text-sm font-medium transition-colors border border-brand-sand">
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#contacto" onclick="showToast('Abriendo página oficial de Facebook')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-cream hover:bg-brand-taupe hover:text-white text-brand-dark text-sm font-medium transition-colors border border-brand-sand">
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#contacto" onclick="showToast('Iniciando chat de WhatsApp con asesoría')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-cream hover:bg-brand-taupe hover:text-white text-brand-dark text-sm font-medium transition-colors border border-brand-sand">
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario Interactivo -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-cream rounded-3xl p-6 sm:p-10 border border-brand-sand/70 shadow-soft">
+                        <form id="quote-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="nombre" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Nombre y Apellidos *</label>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. María Pilar Giménez"
+                                        class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe focus:ring-2 focus:ring-brand-taupe/20">
+                                </div>
+                                <div>
+                                    <label for="telefono" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Teléfono / WhatsApp *</label>
+                                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 600 000 000"
+                                        class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe focus:ring-2 focus:ring-brand-taupe/20">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="email" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Correo Electrónico *</label>
+                                    <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com"
+                                        class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe focus:ring-2 focus:ring-brand-taupe/20">
+                                </div>
+                                <div>
+                                    <label for="localidad" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Localidad del Evento *</label>
+                                    <input type="text" id="localidad" name="localidad" required placeholder="Ej. Ejea, Sádaba, Tauste, Zaragoza..."
+                                        class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe focus:ring-2 focus:ring-brand-taupe/20">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                                <div>
+                                    <label for="tipo_evento" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Tipo de Evento *</label>
+                                    <select id="tipo_evento" name="tipo_evento" required
+                                        class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe">
+                                        <option value="">Selecciona...</option>
+                                        <option value="Boda / Comunión / Bautizo">Boda / Comunión / Bautizo</option>
+                                        <option value="Tardeo / Cumpleaños / Privado">Tardeo / Cumpleaños / Privado</option>
+                                        <option value="Evento Empresarial / Feria Agrícola">Evento Empresa / Feria Agrícola</option>
+                                        <option value="Quintos / Fiestas Patronales">Quintos / Fiestas Patronales</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="modalidad" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Modalidad *</label>
+                                    <select id="modalidad" name="modalidad" required
+                                        class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe">
+                                        <option value="Servicio Completo">Servicio Completo (Recomendado)</option>
+                                        <option value="Alquiler + Transporte">Alquiler + Transporte</option>
+                                        <option value="Solo Alquiler">Solo Alquiler</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="fecha" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Fecha Estimada</label>
+                                    <input type="date" id="fecha" name="fecha"
+                                        class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="mensaje" class="block text-xs font-bold uppercase tracking-wider text-brand-dark mb-2">Detalles del evento o mobiliario seleccionado</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indícanos número aproximado de invitados, estilo que buscas o elementos de nuestro catálogo..."
+                                    class="w-full px-4 py-3.5 rounded-xl bg-white border border-brand-sand text-brand-dark text-sm focus:outline-none focus:border-brand-taupe focus:ring-2 focus:ring-brand-taupe/20"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-brand-dark text-white font-semibold text-base hover:bg-brand-taupe transition-all duration-300 shadow-soft flex items-center justify-center gap-2">
+                                <span>Enviar Solicitud de Presupuesto</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </button>
+                        </form>
+
+                        <!-- Mensaje de Confirmación Tras Enviar (Oculto inicialmente) -->
+                        <div id="form-success" class="hidden text-center py-8 space-y-4">
+                            <div class="w-16 h-16 rounded-full bg-brand-taupe/20 text-brand-taupe flex items-center justify-center mx-auto">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-dark">¡Solicitud recibida correctamente!</h3>
+                            <p class="text-sm text-brand-dark/80 max-w-md mx-auto">
+                                Gracias por contactar con <strong>El Rincón del Evento</strong>. Nuestro equipo revisará los detalles de tu celebración y te enviará un presupuesto personalizado en menos de 24 horas.
+                            </p>
+                            <button onclick="resetForm()" class="mt-2 px-6 py-2.5 rounded-xl bg-white border border-brand-sand text-sm font-semibold text-brand-dark hover:border-brand-taupe">
+                                Realizar otra consulta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-brand-dark text-brand-sand py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+                
+                <!-- Columna Marca con Logotipo fiel a LOGO TFG.png + Nombre al lado -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-16 h-14 sm:w-20 sm:h-16 flex items-center justify-center rounded-2xl bg-brand-cream p-1.5 shadow-soft border border-brand-sand/40 shrink-0">
+                            <svg viewBox="0 0 260 175" class="w-full h-full overflow-visible" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Remate superior de la jaima -->
+                                <circle cx="130" cy="6" r="2.5" fill="#8C7864" />
+                                <!-- Techo curvo puntiagudo tipo jaima -->
+                                <path d="M130 6 C110 48, 62 84, 6 96 L254 96 C198 84, 150 48, 130 6 Z" fill="#8C7864" />
+                                <!-- Costuras y pliegues sutiles de la lona -->
+                                <path d="M130 6 C122 50, 100 82, 82 96" stroke="#7A6855" stroke-width="1.3" fill="none" opacity="0.65" />
+                                <path d="M130 6 C138 50, 160 82, 178 96" stroke="#7A6855" stroke-width="1.3" fill="none" opacity="0.65" />
+                                <line x1="130" y1="6" x2="130" y2="96" stroke="#7A6855" stroke-width="1.3" opacity="0.65" />
+                                <!-- Faldón horizontal superior -->
+                                <rect x="6" y="96" width="248" height="8" rx="1.5" fill="#8C7864" />
+                                <line x1="82" y1="96" x2="82" y2="104" stroke="#7A6855" stroke-width="1.2" opacity="0.65" />
+                                <line x1="130" y1="96" x2="130" y2="104" stroke="#7A6855" stroke-width="1.2" opacity="0.65" />
+                                <line x1="178" y1="96" x2="178" y2="104" stroke="#7A6855" stroke-width="1.2" opacity="0.65" />
+                                <!-- Dos postes laterales verticales -->
+                                <rect x="10" y="104" width="4.5" height="58" fill="#8C7864" />
+                                <rect x="245.5" y="104" width="4.5" height="58" fill="#8C7864" />
+                                <!-- Tipografía Serif marrón oscuro integrada -->
+                                <text x="130" y="135" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="37" font-weight="600" letter-spacing="1" fill="#4A3B31">EL RINCON</text>
+                                <text x="130" y="166" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="31" font-weight="600" letter-spacing="1.2" fill="#4A3B31">DEL EVENTO</text>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white leading-none">
+                                EL RINCÓN
+                            </span>
+                            <span class="text-[10px] sm:text-xs font-medium tracking-[0.22em] text-brand-sand uppercase mt-1">
+                                DEL EVENTO • EJEA DE LOS CABALLEROS
+                            </span>
+                        </div>
+                    </div>
+                    <p class="font-serif italic text-lg text-white/90">
+                        "Del alquiler a la celebración, todo en un rincón."
+                    </p>
+                    <p class="text-xs text-brand-sand/75 leading-relaxed max-w-sm">
+                        Comprometidos con la economía circular, la reutilización responsable y el desarrollo empresarial de Ejea de los Caballeros y la Comarca de las Cinco Villas.
+                    </p>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-white">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Modalidades de Alquiler</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Catálogo de Mobiliario</a></li>
+                        <li><a href="#testimonios" class="hover:text-white transition-colors">Testimonios</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition-colors">Pedir Presupuesto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Datos Legales y Ubicación -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-white">Información Corporativa</h4>
+                    <p class="text-sm text-brand-sand/85">El Rincón del Evento S.L.</p>
+                    <p class="text-xs text-brand-sand/75 leading-relaxed">
+                        Calle F, Polígono Industrial de Valdeferrín<br>
+                        50600 Ejea de los Caballeros (Zaragoza)<br>
+                        Email: info@elrincondelevento.es
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-brand-sand/60">
+                <p>© 2026 El Rincón del Evento S.L. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <span>Aviso Legal</span>
+                    <span>Política de Privacidad (RGPD)</span>
+                    <span>Economía Circular</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= DRAWER LATERAL: MI SELECCIÓN DE MOBILIARIO ================= -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+        <!-- Backdrop -->
+        <div onclick="toggleCartDrawer()" class="fixed inset-0 bg-brand-dark/50 backdrop-blur-xs transition-opacity"></div>
+        
+        <!-- Panel Derecho -->
+        <div class="fixed inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10">
+            <div>
+                <div class="flex items-center justify-between pb-4 border-b border-brand-sand">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark">Mi Selección</h3>
+                        <p class="text-xs text-brand-taupe">Añade elementos para incluirlos en tu presupuesto</p>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="p-2 rounded-xl hover:bg-brand-cream text-brand-dark">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Lista de items seleccionados -->
+                <div id="cart-items-container" class="py-6 space-y-3 max-h-[60vh] overflow-y-auto">
+                    <p class="text-sm text-brand-dark/60 text-center py-8">Aún no has añadido artículos del catálogo.</p>
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-brand-sand space-y-3">
+                <button onclick="transferSelectionToForm()" class="w-full py-3.5 px-5 rounded-xl bg-brand-dark text-white font-semibold text-sm hover:bg-brand-taupe transition-colors">
+                    Pasar selección al formulario
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= NOTIFICACIÓN TOAST FLOTANTE ================= -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-dark text-white px-5 py-3.5 rounded-2xl shadow-soft text-sm font-medium flex items-center gap-3 border border-brand-taupe">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-gold"></span>
+        <span id="toast-message">Mensaje</span>
+    </div>
+
+    <!-- ================= LÓGICA INTERACTIVA (JAVASCRIPT) ================= -->
+    <script>
+        // Datos del Catálogo Corporativo
+        const catalogItems = [
+            {
+                id: 1,
+                title: "Set Chill-Out Mimbre & Lino",
+                category: "chillout",
+                categoryLabel: "Chill-Out y Tardeos",
+                priceRange: "Desde 140 € / pack",
+                description: "Sofá de dos plazas, dos sillones individuales en fibras naturales, cojines tono arena y mesa baja de madera.",
+                image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 2,
+                title: "Arco Ceremonial Geométrico",
+                category: "bodas",
+                categoryLabel: "Bodas y Ceremonias",
+                priceRange: "Desde 95 € / evento",
+                description: "Estructura metálica acabado dorado envejecido o madera natural, ideal para altares civiles o rincón de bienvenida.",
+                image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 3,
+                title: "Pack Mesas Altas & Taburetes Cóctel",
+                category: "corporativo",
+                categoryLabel: "Empresas y Ferias",
+                priceRange: "Desde 110 € / set",
+                description: "Conjunto de 4 mesas altas tipo cóctel y 12 taburetes de diseño para ferias agrícolas, vino español o eventos de empresa.",
+                image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 4,
+                title: "Cortina de Guirnaldas LED Cálidas",
+                category: "iluminacion",
+                categoryLabel: "Photocalls e Iluminación",
+                priceRange: "Desde 65 € / tramo",
+                description: "Iluminación ambiental tipo verbena elegante con bombillas vintage de bajo consumo para patios, fincas y carpas.",
+                image: "https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 5,
+                title: "Barra Móvil Madera & Rattan",
+                category: "chillout",
+                categoryLabel: "Chill-Out y Tardeos",
+                priceRange: "Desde 160 € / evento",
+                description: "Barra portátil modular para servicio de coctelería, tardeos, quintos o mesa dulce con estética cálida artesanal.",
+                image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80"
+            },
+            {
+                id: 6,
+                title: "Photocall Neón & Fondo Textil",
+                category: "iluminacion",
+                categoryLabel: "Photocalls e Iluminación",
+                priceRange: "Desde 120 € / pack",
+                description: "Estructura con cortinaje beige arena, alfombra de yute y cartel luminoso personalizable para celebraciones.",
+                image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80"
+            }
+        ];
+
+        // Estado de la selección de presupuesto
+        let selectedItems = [];
+
+        // Renderizar tarjetas del catálogo
+        function renderCatalog(filter = 'todos') {
+            const grid = document.getElementById('catalog-grid');
+            const filtered = filter === 'todos' 
+                ? catalogItems 
+                : catalogItems.filter(item => item.category === filter);
+
+            grid.innerHTML = filtered.map(item => {
+                const isSelected = selectedItems.some(s => s.id === item.id);
+                return `
+                <article class="bg-brand-cream rounded-3xl overflow-hidden border border-brand-sand/70 hover:border-brand-taupe transition-all duration-300 shadow-card flex flex-col justify-between group">
+                    <div>
+                        <div class="relative aspect-[16/10] overflow-hidden bg-brand-sand/30">
+                            <img 
+                                src="${item.image}" 
+                                alt="${item.title}"
+                                onerror="this.src='https://placehold.co/600x400/8C7864/FFFFFF?text=${encodeURIComponent(item.title)}'"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            >
+                            <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-white/95 text-brand-dark text-xs font-semibold shadow-sm">
+                                ${item.categoryLabel}
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h4 class="font-serif text-xl font-bold text-brand-dark leading-snug">${item.title}</h4>
+                            </div>
+                            <p class="text-xs font-semibold text-brand-taupe mb-3">${item.priceRange}</p>
+                            <p class="text-sm text-brand-dark/75 leading-relaxed">${item.description}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="toggleItemSelection(${item.id})" 
+                            class="w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 ${
+                                isSelected 
+                                ? 'bg-brand-taupe text-white' 
+                                : 'bg-white text-brand-dark border border-brand-sand hover:bg-brand-dark hover:text-white'
+                            }">
+                            <span>${isSelected ? '✓ Añadido a mi selección' : '+ Añadir a mi presupuesto'}</span>
+                        </button>
+                    </div>
+                </article>
+                `;
+            }).join('');
+        }
+
+        // Filtros del catálogo
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-brand-dark', 'text-white');
+                    b.classList.add('bg-brand-cream', 'text-brand-dark');
+                });
+                btn.classList.remove('bg-brand-cream', 'text-brand-dark');
+                btn.classList.add('bg-brand-dark', 'text-white');
+                renderCatalog(btn.dataset.filter);
+            });
+        });
+
+        // Añadir o quitar elemento de la lista de interés
+        function toggleItemSelection(id) {
+            const item = catalogItems.find(i => i.id === id);
+            const existsIndex = selectedItems.findIndex(s => s.id === id);
+
+            if (existsIndex > -1) {
+                selectedItems.splice(existsIndex, 1);
+                showToast(`Eliminado: ${item.title}`);
+            } else {
+                selectedItems.push(item);
+                showToast(`Añadido: ${item.title}`);
+            }
+
+            updateCartUI();
+            const activeFilter = document.querySelector('.filter-btn.bg-brand-dark').dataset.filter;
+            renderCatalog(activeFilter);
+        }
+
+        // Actualizar interfaz del drawer y contadores
+        function updateCartUI() {
+            document.getElementById('cart-badge-desktop').textContent = selectedItems.length;
+            document.getElementById('cart-badge-mobile').textContent = selectedItems.length;
+
+            const container = document.getElementById('cart-items-container');
+            if (selectedItems.length === 0) {
+                container.innerHTML = `<p class="text-sm text-brand-dark/60 text-center py-8">Aún no has añadido artículos del catálogo.</p>`;
+                return;
+            }
+
+            container.innerHTML = selectedItems.map(item => `
+                <div class="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-brand-cream border border-brand-sand/60">
+                    <div>
+                        <h5 class="text-sm font-bold text-brand-dark">${item.title}</h5>
+                        <p class="text-xs text-brand-taupe">${item.priceRange}</p>
+                    </div>
+                    <button onclick="toggleItemSelection(${item.id})" class="p-2 text-brand-dark/50 hover:text-red-600" title="Quitar">
+                        ✕
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // Abrir / cerrar panel lateral
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        // Pasar selección al formulario de contacto
+        function transferSelectionToForm() {
+            toggleCartDrawer();
+            const textarea = document.getElementById('mensaje');
+            if (selectedItems.length > 0) {
+                const listText = selectedItems.map(i => `• ${i.title} (${i.priceRange})`).join('\n');
+                textarea.value = `Hola, me gustaría solicitar presupuesto incluyendo los siguientes elementos de vuestro catálogo:\n${listText}\n\nDetalles adicionales de mi evento: `;
+            }
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+            showToast('Selección añadida al formulario de presupuesto');
+        }
+
+        // Seleccionar modalidad directamente desde las tarjetas
+        function selectModality(modalityName) {
+            const select = document.getElementById('modalidad');
+            select.value = modalityName;
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+            showToast(`Modalidad seleccionada: ${modalityName}`);
+        }
+
+        // Menú móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('icon-menu-open');
+        const iconClose = document.getElementById('icon-menu-close');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        // Gestión del Formulario de Contacto
+        const quoteForm = document.getElementById('quote-form');
+        const formSuccess = document.getElementById('form-success');
+
+        quoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            quoteForm.classList.add('hidden');
+            formSuccess.classList.remove('hidden');
+            showToast('¡Solicitud enviada con éxito!');
+        });
+
+        function resetForm() {
+            quoteForm.reset();
+            formSuccess.classList.add('hidden');
+            quoteForm.classList.remove('hidden');
+        }
+
+        // Toast Notification
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3200);
+        }
+
+        // Inicializar catálogo al cargar
+        renderCatalog('todos');
+    </script>
+</body>
+</html>
